@@ -21,6 +21,8 @@ The console project will request the number of strings, once we entered the numb
 
 Move to the Unit Test project `cd ..\SortString.Test\` and execute `dotnet test` to run the unit tests.
 
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-7.png?raw=true)
+
 ## Screenshots
 
 ### 2 Strings
