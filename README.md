@@ -24,3 +24,17 @@ Move to the Unit Test project `cd ..\SortString.Test\` and execute `dotnet test`
 ## Screenshots
 
 ### 2 Strings
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-1.png?raw=true)
+
+### 3 Strings
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-5.png?raw=true)
+
+### 5 Strings
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-3.png?raw=true)
+
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-6.png?raw=true)
+
+### 10 Strings
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-2.png?raw=true)
+
+![alt text](https://github.com/sergiodiaz92/SortString/blob/master/SortString-Screenshots/sc-4.png?raw=true)
