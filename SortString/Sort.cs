@@ -9,12 +9,8 @@ namespace SortString
     public class Sort
     {
         // function to print string in sorted order
-        public static void sortString(String str)
+        public static string sortString(String str)
         {
-            //char[] arr = str.ToCharArray();
-            //Array.Sort(arr);
-            //Console.WriteLine(String.Join("", arr));
-
             Dictionary<char, int> dic = new Dictionary<char, int>();
             foreach (var c in str)
             {
@@ -22,6 +18,7 @@ namespace SortString
                 else dic[c] = 1;
             }
             var list = dic.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToList();
+            if (String.IsNullOrEmpty(str)) return "-404";
             string result = "";
             foreach (var item in list)
             {
@@ -30,13 +27,15 @@ namespace SortString
                     result += item.Key;
                 }
             }
-            Console.WriteLine(result);
+            return result;
         }
         public static void sortStrings(int n, List<string> listStr)
         {
+            string result = "";
             foreach (string str in listStr)
             {
-                sortString(str);
+                result = sortString(str);
+                Console.WriteLine(result);
             }
         }
     }

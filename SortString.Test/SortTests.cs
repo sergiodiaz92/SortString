@@ -33,6 +33,16 @@ namespace SortString.Test
                 "ykiuvzfcbc"
             };
         }
+        private List<string> FiveStringSample2()
+        {
+            return new List<string> {
+                "xqycs",
+                "beoax",
+                "afkso",
+                "bldit",
+                "gwrys"
+            };
+        }
         private List<string> TenStringSample()
         {
             return new List<string> {
@@ -48,13 +58,39 @@ namespace SortString.Test
                 "fkdsgnekft"
             };
         }
-        [SetUp]
-        public void Setup()
+        private List<string> TenStringSample2()
         {
+            return new List<string> {
+                "qakmc",
+                "rrtbk",
+                "vaixn",
+                "wmpnj",
+                "uproi",
+                "btska",
+                "ejqwr",
+                "elwlg",
+                "oaoiy",
+                "hrqkn"
+            };
         }
 
         [Test]
-        public void SortStringTwoStrings()
+        public void SortStringEmptyString()
+        {
+            string result = SortString.Sort.sortString("");
+            string expected = "-404";
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void SortStringOneString()
+        {
+                string result = SortString.Sort.sortString("abaccadcc");
+                string expected = "ccccaaabd";
+                Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void SortListOfTwoStrings()
         {
             using (StringWriter sw = new StringWriter())
             {
@@ -66,7 +102,7 @@ namespace SortString.Test
         }
 
         [Test]
-        public void SortStringThreeStrings()
+        public void SortListOfThreeStrings()
         {
             using (StringWriter sw = new StringWriter())
             {
@@ -78,7 +114,7 @@ namespace SortString.Test
         }
 
         [Test]
-        public void SortStringFiveStrings()
+        public void SortListOfFiveStrings()
         {
             using (StringWriter sw = new StringWriter())
             {
@@ -90,7 +126,19 @@ namespace SortString.Test
         }
 
         [Test]
-        public void SortStringTenStrings()
+        public void SortListOfFiveStrings2()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                SortString.Sort.sortStrings(5, FiveStringSample2());
+                string expected = $"cqsxy{Environment.NewLine}abeox{Environment.NewLine}afkos{Environment.NewLine}bdilt{Environment.NewLine}grswy{Environment.NewLine}";
+                Assert.AreEqual(expected, sw.ToString());
+            }
+        }
+
+        [Test]
+        public void SortListOfTenStrings()
         {
             using (StringWriter sw = new StringWriter())
             {
@@ -100,5 +148,17 @@ namespace SortString.Test
                 Assert.AreEqual(expected, sw.ToString());
             }
         }
+
+        [Test]
+        public void SortListOfTenStrings2()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                SortString.Sort.sortStrings(10, TenStringSample2());
+                string expected = $"ackmq{Environment.NewLine}rrbkt{Environment.NewLine}ainvx{Environment.NewLine}jmnpw{Environment.NewLine}iopru{Environment.NewLine}abkst{Environment.NewLine}ejqrw{Environment.NewLine}llegw{Environment.NewLine}ooaiy{Environment.NewLine}hknqr{Environment.NewLine}";
+                Assert.AreEqual(expected, sw.ToString());
+            }
+       }
     }
 }
